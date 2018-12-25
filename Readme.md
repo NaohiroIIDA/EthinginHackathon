@@ -1,4 +1,7 @@
-ハッカソンなのにエッチングで基板を量産する
+
+# ハッカソンなのにエッチングで基板を量産する
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+
 2018/12/15・16に秋葉原UDXで行われた[Yahoo HackDay2018](https://hackday.jp/) に誘われたので参加することになり、
 当日初対面の方たちと話し合った結果、エッチングで基板を作り、24時間で設計から量産を行う事になった。
 
