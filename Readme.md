@@ -12,7 +12,7 @@ ESP8266を搭載し、会場を飛び交っているSSIDの数と信号強度を
 ## 設計
 Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターンを設計した。特にどちらでも問題ないと思う。
 
-<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2673.jpg" height=200px>
+<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2673.jpg" height=200px> <img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg" height=200px>
 
 エッチングでのパターンはPCBメーカーに出すのと異なり、いくつか『こうしたほうがいい』ポイントがある。
 
@@ -23,8 +23,6 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 ラフに言うと、エッチング液（塩化第二鉄）が銅を溶かしてパターンを浮かび上がらせるので、あまり細いとパターンが切れてしまう恐れがあり、余白もベタで塗っておけば溶かす量が減るので早く仕上がり、角があるとそこに液が十分に回らないと溶かしきれない事がある。このあたりは何度かやってみると感覚が分かってくる、としか言えないが、『DIPでピン間1本通すのがギリかな』とか『線幅は0.5mm以上にしたほうが失敗が少ないかな』と感じている。
 ただ今回、『HackDay2018』とロゴは目立つようにしたかったため、あえてポジでエッチングした。かっこいい。
 
-
-<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg" height=200px>
 
 ## パターンを印刷
 千石電商B1にて、[サンハヤト製クイックポジ感光基板NZ-E43K（ガラスコンポジット1.0t×100×150）](https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=556R-5TE6)と 
