@@ -12,7 +12,7 @@ ESP8266を搭載し、会場を飛び交っているSSIDの数と信号強度を
 ## 設計
 Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターンを設計した。特にどちらでも問題ないと思う。
 
-<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2673.jpg" height=200px> <img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg" height=200px>
+<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2673.jpg" height=200px> <img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/sch.png" height=200px>
 
 エッチングでのパターンはPCBメーカーに出すのと異なり、いくつか『こうしたほうがいい』ポイントがある。
 
@@ -44,6 +44,7 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 
 ## 現像
 こちらは[スプレー式の現像液](https://www.amazon.co.jp/dp/B011IJRP2C/)を利用した。現像には液の温度や濃度などが重要だが、スプレー式は比較的寒い時期でも問題なくすばやく現像できる。ただし強力なのでモタモタしているとパターンが無くなってしまうので、状態をよく見ながら進める必要がある。垂直に立てた基板にたっぷりとスプレーし、泡が基板全体を覆いつつどんどんと下に流れて行くようにする。キレイに感光できているならクッキリとパターンが浮かび上がるのですかさず基板を水洗いして現像を止める。
+<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2680.jpg" height=200px>
 
 ## エッチング
 #### ！！注意！！エッチング液は絶対に未処理で捨てない！
