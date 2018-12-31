@@ -1,11 +1,10 @@
 
 # ハッカソンなのにエッチングで基板を量産する
 
-<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg" height=200px>
+<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg" height=400px>
 
 
-2018/12/15・16に秋葉原UDXで行われた[Yahoo HackDay2018](https://hackday.jp/) に誘われたので参加することになり、
-当日初対面の方たちと話し合った結果、エッチングで基板を作り、24時間で設計から量産を行う事になった。
+2018/12/15・16に秋葉原UDXで行われた[Yahoo HackDay2018](https://hackday.jp/) に誘われたので参加することになり、当日初対面の方たちと話し合った結果、エッチングで基板を作り、24時間で設計から量産を行う事になった。
 
 ## どんな基板を作ったの？
 ESP8266を搭載し、会場を飛び交っているSSIDの数と信号強度をLEDで視覚化するというモジュールを複数作ることにした。秋葉原に行くと本当にビックリするくらいWiFiが使えないし、ものすごい数のSSIDがカウントできる。複数のモジュールをばら撒いておいて『おっ、この辺がWiFi空いている』とか『信号強度からしてここが発信源だ！』みたいな事ができそうな気がした。
@@ -23,6 +22,8 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 
 ラフに言うと、エッチング液（塩化第二鉄）が銅を溶かしてパターンを浮かび上がらせるので、あまり細いとパターンが切れてしまう恐れがあり、余白もベタで塗っておけば溶かす量が減るので早く仕上がり、角があるとそこに液が十分に回らないと溶かしきれない事がある。このあたりは何度かやってみると感覚が分かってくる、としか言えないが、『DIPでピン間1本通すのがギリかな』とか『線幅は0.5mm以上にしたほうが失敗が少ないかな』と感じている。
 ただ今回、『HackDay2018』とロゴは目立つようにしたかったため、あえてポジでエッチングした。かっこいい。
+
+
 <img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg" height=200px>
 
 ## パターンを印刷
@@ -31,7 +32,7 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 秋葉原から30分くらいにある自分の事務所から[ブラザー製インクジェットプリンタDCP-J567N](https://www.brother.co.jp/product/printer/inkjet/dcpj567n/index.aspx)と[インクジェット対応OHPシート](https://www.amazon.co.jp/dp/B003Z9LDRW/)を持ち込み、設計したパターンを面付けして印刷した。
 ####ここでポイント：印刷した際のインク麺が基板に密着するように、左右反転して印刷すること。
 
-<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg" height=200px>
+<img src="https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg" height=200px>
 
 ## 感光
 プリント基板の感光には紫外線が必要で、蛍光灯や太陽光でも感光は可能なのだが安定したキレイなパターンを得る為に[専用ライト](https://www.amazon.co.jp/dp/B00ZZQAGJO/)を使用した。またパターンを感光基板に密着させることが大前提なので、こちらも[バキューム式のクランプ](https://www.amazon.co.jp/dp/B00ZZQAFF4/)を使用した。もしあなたがエッチングで基板を作る事を今後も考えているなら、この2つはオススメ。注意するべきは感光マスクの出来と焼き付ける露光時間で、感光マスクについてはしっかり光を遮ってエッジがクッキリしていることが必要。（同じOHPシートを2枚印刷して重ねても良い）。露光時間は基板の製造経過時間を確認して[こちら] (https://www.sunhayato.co.jp/dcms_media/other/NZ-expProfile.pdf)のグラフから確認することをオススメする。
