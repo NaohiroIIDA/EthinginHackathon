@@ -64,5 +64,5 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 参加者の方にも『馬鹿じゃないの？』とコメントされたが、
 https://twitter.com/shigezo/status/1075191497497047040
 仲間うちに指摘されたのは「あの場あの時間でエッチングから実装までやったのは驚異的だし素晴らしいんだけど、審査員にその価値わかる人いなかったね」という点。ただ基板発注するのとは訳が違うんだけど、日頃からハードウェア関わってる人はそこ笑ってくれた。痛快だったぜ。#hackday2018
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_demo3.jpg)
 
