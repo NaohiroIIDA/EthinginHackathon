@@ -10,6 +10,7 @@ ESP8266を搭載し、会場を飛び交っているSSIDの数と信号強度を
 
 ## 設計
 Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターンを設計した。特にどちらでも問題ないと思う。
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2673.jpg)
 エッチングでのパターンはPCBメーカーに出すのと異なり、いくつか『こうしたほうがいい』ポイントがある。
 
 + できるだけ太く
@@ -18,7 +19,7 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 
 ラフに言うと、エッチング液（塩化第二鉄）が銅を溶かしてパターンを浮かび上がらせるので、あまり細いとパターンが切れてしまう恐れがあり、余白もベタで塗っておけば溶かす量が減るので早く仕上がり、角があるとそこに液が十分に回らないと溶かしきれない事がある。このあたりは何度かやってみると感覚が分かってくる、としか言えないが、『DIPでピン間1本通すのがギリかな』とか『線幅は0.5mm以上にしたほうが失敗が少ないかな』と感じている。
 ただ今回、『HackDay2018』とロゴは目立つようにしたかったため、あえてポジでエッチングした。かっこいい。
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2674.jpg)
 
 ## パターンを印刷
 千石電商B1にて、[サンハヤト製クイックポジ感光基板NZ-E43K（ガラスコンポジット1.0t×100×150）](https://www.sengoku.co.jp/mod/sgk_cart/detail.php?code=556R-5TE6)と 
@@ -29,25 +30,31 @@ Eagleで回路図を引いた後、別なメンバーがKiCadでPCBパターン�
 
 ## 感光
 プリント基板の感光には紫外線が必要で、蛍光灯や太陽光でも感光は可能なのだが安定したキレイなパターンを得る為に[専用ライト](https://www.amazon.co.jp/dp/B00ZZQAGJO/)を使用した。またパターンを感光基板に密着させることが大前提なので、こちらも[バキューム式のクランプ](https://www.amazon.co.jp/dp/B00ZZQAFF4/)を使用した。もしあなたがエッチングで基板を作る事を今後も考えているなら、この2つはオススメ。注意するべきは感光マスクの出来と焼き付ける露光時間で、感光マスクについてはしっかり光を遮ってエッジがクッキリしていることが必要。（同じOHPシートを2枚印刷して重ねても良い）。露光時間は基板の製造経過時間を確認して[こちら] (https://www.sunhayato.co.jp/dcms_media/other/NZ-expProfile.pdf)のグラフから確認することをオススメする。
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2677.jpg)
 
 ## 現像
 こちらは[スプレー式の現像液](https://www.amazon.co.jp/dp/B011IJRP2C/)を利用した。現像には液の温度や濃度などが重要だが、スプレー式は比較的寒い時期でも問題なくすばやく現像できる。ただし強力なのでモタモタしているとパターンが無くなってしまうので、状態をよく見ながら進める必要がある。垂直に立てた基板にたっぷりとスプレーし、泡が基板全体を覆いつつどんどんと下に流れて行くようにする。キレイに感光できているならクッキリとパターンが浮かび上がるのですかさず基板を水洗いして現像を止める。
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+
 ## エッチング
 #### ！！注意！！エッチング液は絶対に未処理で捨てない！
 #### あと洋服に付くと絶対落ちないので奥様／母親にすごく怒られる！！
 サンハヤトのエッチング液には厚手のビニール袋が入っていて、こちらを使うのがポイント。今回は持ち込んだ電気ポットで80℃前後のお湯を作り、エッチング液を入れた厚手のビニールを湯煎して温める。お湯の中に10分も漬けると十分熱くなるので
 基板（入れる前に基板の角をヤスリで丸めておく）を入れ、袋を激しく揺する。常に新しいエッチング液が基板に触れ続けるようなイメージで袋を揺すりながら、時々エッチングの状態を確認する。温度やパターンにもよるが3分位でエッチングが終了する。袋から基板を引き上げ、十分にエッチング液を拭き取ってからアルコールを使って感光レジストを除去するとピカピカの銅箔パターンが現れる。キレイ。
 ただこのままだと酸化してハンダが乗りづらくなるので、フラックスをスプレーして十分に乾かす。これでOK。
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2681.jpg)
 
 ## 実装
 せっかくなので表面実装部品をリフロー実装する。今回はクリーム半田ディスペンサを使ってクリーム半田を載せ、ホットエアマシンを使ってリフローしていった。メタルマスクが無くても、リフロー炉が無くてもリフローが出来る。
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2688.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2690.jpg)
 
 ## デモ
-![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_2687.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_demo1.jpg)
+![HackDay2018](https://github.com/NaohiroIIDA/EthinginHackathon/blob/master/image/IMG_demo2.jpg)
+
+##スライド
+![Wifi警察](https://speakerdeck.com/krfatos/wi-fibasutazu-hackday2018?slide=5)
+
 
 ## 最後に
 参加者の方にも『馬鹿じゃないの？』とコメントされたが、
